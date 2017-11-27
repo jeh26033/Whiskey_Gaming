@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the initial readme for the Whiskey Gaming site. It will cover our hopeful goals and things we wish to accomplish with this site. but that is for later. 
 
 Things you may want to cover:
 
