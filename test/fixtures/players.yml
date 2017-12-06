@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match: one
+  uid: MyString
+  hero: MyText
+  level: 1
+  kills: 1
+  deaths: 1
+  assists: 1
+  last_hits: 1
+  denies: 1
+  gold: 1
+  gpm: 1
+  xpm: 1
+  status: 1
+  gold_spent: 1
+  hero_damage: 1
+  tower_damage: 1
+  hero_healing: 1
+  items: MyText
+  slot: 1
+  radiant: false
+
+two:
+  match: two
+  uid: MyString
+  hero: MyText
+  level: 1
+  kills: 1
+  deaths: 1
+  assists: 1
+  last_hits: 1
+  denies: 1
+  gold: 1
+  gpm: 1
+  xpm: 1
+  status: 1
+  gold_spent: 1
+  hero_damage: 1
+  tower_damage: 1
+  hero_healing: 1
+  items: MyText
+  slot: 1
+  radiant: false

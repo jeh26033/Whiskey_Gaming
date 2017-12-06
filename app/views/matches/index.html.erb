@@ -1,0 +1,7 @@
+
+<% if session.key? :current_user %>
+<h3>Current user:</h3>
+<%= image_tag session[:current_user][:image] %>
+<p><%= session[:current_user][:nickname] %></p>
+<p><%= session[:current_user][:uid] %></p>
+<% end %>

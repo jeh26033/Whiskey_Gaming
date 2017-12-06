@@ -30,10 +30,34 @@
 	      <li class="nav-item">
 	        <a class="nav-link" <%=link_to 'News', news_path %></a>
 	      </li>
+
+	       <% if current_user %>
+            <ul class="nav-item pull-right">
+              <li class="nav-link"><%= image_tag current_user.avatar_url, alt: current_user.nickname %></li>
+              <li class="nav-link"><%= link_to 'Log Out', logout_path, method: :delete %></li>
+            </ul>
+          <% else %>
+            <ul class="nav-item">
+
+			<%= link_to image_tag("http://cdn.steamcommunity.com/public/images/signinthroughsteam/sits_large_noborder.png"), '/auth/steam' %>
+
+              
+            </ul>
+          <% end %>
+
+        
 	    </ul>
 
 	  
 	  </div>
 	</nav>
+	<div class="container">
+      		<% flash.each do |key, value| %>
+      		<div class="alert alert-<%= key %>">
+          		<%= value %>
+        	</div>
+      		<% end %>
+    	</div>
+  <div class="page-header"><h1><%= yield :page_header %></h1></div>
   </div>
 </header>

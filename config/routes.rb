@@ -1,21 +1,30 @@
 Rails.application.routes.draw do
 
-  root 'static_pages#home'
+  	get 'sessions/create'
 
-  get '/home', to: 'static_pages#home'
+	 get "welcome/index"
+  	root 'welcome#index'
+	post 'auth/steam/callback' => 'welcome#auth_callback'
 
-  get '/help', to: 'static_pages#help'
+	get '/home', to: 'static_pages#home'
 
-  get '/about', to: 'static_pages#about'
+	get '/help', to: 'static_pages#help'
 
-  get '/teams', to: 'static_pages#teams'
+	get '/about', to: 'static_pages#about'
 
-  get '/news', to: 'static_pages#news'
+	get '/teams', to: 'static_pages#teams'
 
-  get '/leaderboards', to: 'static_pages#leaderboards'
+	get '/news', to: 'static_pages#news'
 
- 
-  resources :articles
+	get '/leaderboards', to: 'static_pages#leaderboards'
+
+	match '/auth/:provider/callback', to: 'sessions#create', via: :all
+
+	delete '/logout', to: 'sessions#destroy', as: :logout
+	
+	resources :matches, only: [:index, :show]
+
+	resources :articles
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

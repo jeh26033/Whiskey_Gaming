@@ -14,4 +14,9 @@
  
  */
 @import "bootstrap";
+.info-table {
+  img {
+    width: 30px;
+  }
+}
 /*@import "bootstrap-sprockets" */
