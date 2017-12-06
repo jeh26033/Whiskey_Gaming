@@ -101,6 +101,8 @@ GEM
     hashie (3.5.6)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
+    httparty (0.15.6)
+      multi_xml (>= 0.5.2)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -123,6 +125,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.10.3)
     multi_json (1.12.2)
+    multi_xml (0.6.0)
     multipart-post (2.0.0)
     netrc (0.11.0)
     nio4r (2.1.0)
@@ -244,6 +247,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   dota!
   figaro
+  httparty
   jbuilder (~> 2.5)
   jquery-rails
   nodejs-rails (~> 0.0.1)

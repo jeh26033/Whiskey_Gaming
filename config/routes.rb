@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-  	get 'sessions/create'
+  
 
-	 get "welcome/index"
-  	root 'welcome#index'
-	post 'auth/steam/callback' => 'welcome#auth_callback'
+
+  	root 'static_pages#home'
 
 	get '/home', to: 'static_pages#home'
 
