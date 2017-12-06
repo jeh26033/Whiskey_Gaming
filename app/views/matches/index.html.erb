@@ -2,3 +2,16 @@
 <p>hey look at me</p>
 
 
+<% page_header 'Your matches' %>
+
+<% if @matches && @matches.any? %>
+  <table class="table table-striped table-hover">
+    <% @matches.each do |match| %>
+      <tr>
+        <td>
+          <%= link_to match.started_at, match_path(match) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
