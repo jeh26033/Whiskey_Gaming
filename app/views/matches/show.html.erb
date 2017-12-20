@@ -1,1 +1,21 @@
-<p>I'm here, the show view</p>
+<% provide(:title, "Match #{@match.uid} ")%>
+
+<% page_header "Match #{@match.uid} <small>#{@match.started_at}</small>" %>
+
+<h2 class="<%= @match.winner.downcase %>"><%= @match.winner %> won</h2>
+
+<ul>
+  <li><strong>Mode:</strong> <%= @match.mode %></li>
+  <li><strong>Type:</strong> <%= @match.match_type %></li>
+  <li><strong>Duration:</strong> <%= @match.duration %></li>
+ 
+</ul>
+
+
+    <% logger.debug"started loading radiant team"%>
+
+<%= render 'details_table' , players: @players[true], team: 'radiant'%>
+   
+    <% logger.debug"started loading dire team"%>
+
+<%= render 'details_table', players: @players[false], team: 'dire' %>

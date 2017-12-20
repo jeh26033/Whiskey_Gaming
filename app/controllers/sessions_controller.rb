@@ -8,6 +8,7 @@ skip_before_action :verify_authenticity_token, only: :create
     else
       session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.nickname}!"
+      @user.load_matches!(1)
     end
     redirect_to root_path
   end

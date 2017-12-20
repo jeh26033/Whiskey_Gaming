@@ -1,6 +1,8 @@
 class Player < ApplicationRecord
+	
 	belongs_to :match
-
+	has_many :match
+	
 	serialize :hero
 	serialize :items
 	serialize :additional_units

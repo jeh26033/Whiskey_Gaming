@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-
   
-
-
   	root 'static_pages#home'
 
 	get '/home', to: 'static_pages#home'
@@ -15,13 +12,15 @@ Rails.application.routes.draw do
 
 	get '/news', to: 'static_pages#news'
 
-	get '/leaderboards', to: 'static_pages#leaderboards'
+	get '/leaderboards', to: 'matches#index'
 
 	match '/auth/:provider/callback', to: 'sessions#create', via: :all
 
 	delete '/logout', to: 'sessions#destroy', as: :logout
 	
 	resources :matches, only: [:index, :show]
+
+	
 
 	resources :articles
 

@@ -1,5 +1,5 @@
 <!-- testing -->
-<p>hey look at me</p>
+<% provide(:title, "Your matches")%>
 
 
 <% page_header 'Your matches' %>
@@ -9,7 +9,7 @@
     <% @matches.each do |match| %>
       <tr>
         <td>
-          <%= link_to match.started_at, match_path(match) %>
+           <%=match.id %>.  <%= link_to match.started_at, match_path(match) %>
         </td>
       </tr>
     <% end %>
